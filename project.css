@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* header */
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background: #454545;
+color: #fff;
+padding: 1em;
+text-align: center;
+z-index: 1000;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+background: #454545;
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+gap: 10%;
+justify-content: center;
+}
+
+nav a {
+background-color: #555;
+color: #fff;
+text-decoration: none;
+padding: 0.5em 1em;
+border-radius: 5px;
+transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+background-color: #777;
+}
+
+@media (max-width: 768px) {
+nav ul {
+    flex-direction: column;
+    gap: 10%;
+    align-items: center;
+}
+
+nav li {
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+}
+  
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+     position: absolute; 
+     top: 7vh; 
+    background-color: #d9d9d9;
+    padding: 5vw;
+}
+  
+.projects-container .portfolio {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 7px 10px 10px #333;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #333;
+    border-radius: 5%;
+    width: 100%; 
+    height: 400px;
+}
+  
+.portfolio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    opacity: 0.7;
+}
+  
+.projects-container .portfolio:hover img {
+    transform: scale(1.1);
+}
+  
+.portfolio .portfolio_layer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), #fff6ec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 2rem;
+    line-height: 7vh;
+  }
+  
+  .projects-container .portfolio:hover .portfolio_layer {
+    opacity: 1;
+    color: #fff6ec;
+  }
+  
+  .projects-container .portfolio:hover .portfolio_layer h3,
+  p {
+    color: black;
+  }
+.portfolio_layer h3{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+.portfolio_layer p{
+    position: absolute;
+    top: 40%;
+    right: 4%;
+}
+.portfolio_layer i{
+    position: absolute;
+    bottom: 25%;
+    color: #454545;
+}
+h3{
+    color: black;
+}
